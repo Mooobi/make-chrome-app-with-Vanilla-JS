@@ -1,4 +1,4 @@
-[
+const quotes = [
   {
     quote: '삶이 있는 한 희망은 있다.',
     author: '키케로',
@@ -40,3 +40,11 @@
     author: '디즈니 CEO, 로버트 아이거',
   },
 ];
+
+const quote = document.querySelector('#quote span:first-child');
+const author = document.querySelector('#quote span:last-child');
+
+const todaysQuote = quotes[parseInt(Math.random() * quotes.length)];
+
+quote.textContent = todaysQuote.quote;
+author.textContent = todaysQuote.author;
